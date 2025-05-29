@@ -1,113 +1,117 @@
-
 <!DOCTYPE html>
 <html lang="bn">
 <head>
-  <meta charset="UTF-8" />
-  <title>আমার লেখালেখির সাইট</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ভাবনা 2 | যোগাযোগ ফর্ম</title>
   <style>
-    body {
-      font-family: 'SolaimanLipi', sans-serif;
+    * {
+      box-sizing: border-box;
       margin: 0;
       padding: 0;
-      background: #f4f4f4;
+      font-family: 'Noto Sans Bengali', sans-serif;
     }
+
+    body {
+      background-color: #f0f8ff;
+      color: #333;
+      padding: 20px;
+    }
+
     header {
-      background: #6a1b9a;
+      background-color: #4CAF50;
       color: white;
       padding: 20px;
       text-align: center;
-    }
-    nav {
-      background: #4a148c;
-      text-align: center;
-      padding: 10px;
-    }
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin: 0 15px;
-      font-weight: bold;
-    }
-    .container {
-      max-width: 800px;
-      margin: auto;
-      padding: 20px;
-      background: white;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-      margin-top: 20px;
-      margin-bottom: 20px;
       border-radius: 10px;
     }
-    .post {
-      margin-bottom: 40px;
+
+    .container {
+      background-color: white;
+      padding: 25px;
+      max-width: 600px;
+      margin: 20px auto;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     }
-    .like-btn {
-      background: none;
+
+    h2 {
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 8px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    button {
+      margin-top: 20px;
+      background-color: #4CAF50;
+      color: white;
       border: none;
-      color: #6a1b9a;
+      padding: 12px 20px;
+      border-radius: 5px;
       cursor: pointer;
+      width: 100%;
       font-size: 16px;
     }
-    .comments {
-      margin-top: 10px;
+
+    button:hover {
+      background-color: #45a049;
     }
-    footer {
-      text-align: center;
-      padding: 20px;
-      background: #ddd;
+
+    img {
+      max-width: 100%;
+      border-radius: 10px;
+      margin-bottom: 20px;
+    }
+
+    @media (max-width: 600px) {
+      header, .container {
+        padding: 15px;
+      }
+
+      button {
+        font-size: 14px;
+      }
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>আমার লেখালেখির জগৎ</h1>
-  </header>
-  <nav>
-    <a href="index.html">প্রথম পাতা</a>
-    <a href="submit.html">আপনার লেখা দিন</a>
-  </nav>
-  <div class="container">
-    <div class="post">
-      <h2>একটি নতুন সকাল</h2>
-      <p>সূর্য উঠছে, পাখিরা ডাকছে, জীবন নতুন করে শুরু হচ্ছে আজ...</p>
-      <button class="like-btn" onclick="likePost(this)">❤️ লাইক (<span>0</span>)</button>
-      <div class="comments">
-        <input type="text" placeholder="মন্তব্য লিখুন" />
-        <button onclick="addComment(this)">মন্তব্য পোস্ট করুন</button>
-        <ul></ul>
-      </div>
-    </div>
-    <div class="post">
-      <h2>রাতের গল্প</h2>
-      <p>আকাশ জুড়ে তারা, নিঃশব্দ রাতে কেউ যেন গল্প বলছে মনে মনে...</p>
-      <button class="like-btn" onclick="likePost(this)">❤️ লাইক (<span>0</span>)</button>
-      <div class="comments">
-        <input type="text" placeholder="মন্তব্য লিখুন" />
-        <button onclick="addComment(this)">মন্তব্য পোস্ট করুন</button>
-        <ul></ul>
-      </div>
-    </div>
-  </div>
-  <footer>
-    <p>&copy; ২০২৫ আমার লেখালেখি</p>
-  </footer>
 
-  <script>
-    function likePost(btn) {
-      let count = btn.querySelector('span');
-      count.textContent = parseInt(count.textContent) + 1;
-    }
-    function addComment(button) {
-      const input = button.previousElementSibling;
-      const commentText = input.value.trim();
-      if (commentText !== '') {
-        const ul = button.nextElementSibling;
-        const li = document.createElement('li');
-        li.textContent = commentText;
-        ul.appendChild(li);
-        input.value = '';
-      }
-    }
-  </script>
+  <header>
+    <h1>ভাবনা 2</h1>
+    <p>আমাদের সাথে যোগাযোগ করুন</p>
+  </header>
+
+  <div class="container">
+    <img src="https://via.placeholder.com/600x200.png?text=ভাবনা+২+ছবি" alt="ভাবনা 2 ছবি">
+    
+    <h2>যোগাযোগ ফর্ম</h2>
+
+    <form>
+      <label for="name">নাম:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">ইমেল:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="message">বার্তা:</label>
+      <textarea id="message" name="message" rows="5" required></textarea>
+
+      <button type="submit">পাঠান</button>
+    </form>
+  </div>
+
 </body>
 </html>
