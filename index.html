@@ -2,115 +2,75 @@
 <html lang="bn">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>ভাবনা - গল্পের তালিকা</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ভাবনা ২</title>
   <style>
     body {
-      font-family: 'Siyam Rupali', sans-serif;
-      background: #f4f4f4;
+      font-family: 'Noto Sans Bengali', sans-serif;
       margin: 0;
       padding: 0;
+      background-color: #e9f5e9;
+      color: #333;
     }
     header {
-      background: #222;
+      background-color: #2c3e50;
       color: white;
-      padding: 10px 20px;
+      padding: 20px;
       text-align: center;
     }
-    header h1 {
-      margin: 0;
-      font-size: 28px;
-    }
-    nav {
-      background: #333;
-      padding: 10px;
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      flex-wrap: wrap;
-    }
-    nav a {
-      color: white;
-      text-decoration: none;
-    }
-    .container {
+    main {
       padding: 20px;
-      max-width: 800px;
-      margin: auto;
-    }
-    .search-box {
-      margin-bottom: 20px;
-    }
-    input[type="text"] {
-      width: 100%;
-      padding: 10px;
-      font-size: 16px;
     }
     .story {
-      background: white;
-      margin-bottom: 15px;
+      background-color: #ffffff;
       padding: 15px;
-      border-left: 5px solid #e91e63;
+      margin-bottom: 15px;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     }
-    .story h3 {
-      margin: 0;
-      color: #e91e63;
+    footer {
+      background-color: #1e1e1e;
+      color: white;
+      text-align: center;
+      padding: 30px 10px;
     }
-    .story p {
-      margin: 5px 0;
+    footer a {
+      color: white;
+      text-decoration: none;
+      margin: 0 10px;
     }
-    .meta {
-      font-size: 14px;
-      color: gray;
+    footer a:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
 <body>
+
   <header>
-    <h1>ভাবনা</h1>
-    <p>আমরা চালু করেছি নতুন গল্পের সাইট</p>
+    <h1>ভাবনা ২</h1>
+    <p>গল্পের প্ল্যাটফর্মে স্বাগতম!</p>
   </header>
-  <nav>
-    <a href="#">বিভাগ</a>
+
+  <main>
+    <div class="story">
+      <h2>ছোট গল্প ১</h2>
+      <p>এটি একটি নমুনা গল্প। আপনি চাইলে এখানে নিজের লেখা আপলোড করতে পারেন।</p>
+    </div>
+    <div class="story">
+      <h2>ছোট গল্প ২</h2>
+      <p>আরেকটি নমুনা গল্প এখানে দেখানো হয়েছে।</p>
+    </div>
+  </main>
+
+  <footer>
     <a href="#">গল্প লিখে পাঠান</a>
-  </nav>
+    <a href="#">যোগাযোগ করুন</a>
+    <a href="#">অভিযোগ জানান</a>
+    <a href="#">আমরা কারা</a><br><br>
+    <a href="#">Privacy Policy</a>
+    <a href="#">Work with us!</a><br><br>
+    <a href="#">বিজ্ঞাপন – Advertise</a>
+  </footer>
 
-  <div class="container">
-    <div class="search-box">
-      <input type="text" id="searchInput" placeholder="গল্প খুঁজুন..." onkeyup="searchStories()">
-    </div>
-
-    <div id="storyList">
-      <div class="story">
-        <h3>ভালোবাসার গল্প</h3>
-        <p class="meta">by রাকিব | ৩০ মে ২০২৫</p>
-        <p>এটি একটি প্রেমের গল্প যেখানে...</p>
-        <p class="meta">পাঠকের মন্তব্য: ৫</p>
-      </div>
-      <div class="story">
-        <h3>ভৌতিক অভিজ্ঞতা</h3>
-        <p class="meta">by মিতু | ২৮ মে ২০২৫</p>
-        <p>আমরা সবাই মিলে পাহাড়ে...</p>
-        <p class="meta">পাঠকের মন্তব্য: ৩</p>
-      </div>
-      <div class="story">
-        <h3>একটি যুদ্ধের গল্প</h3>
-        <p class="meta">by হাসান | ২৫ মে ২০২৫</p>
-        <p>যুদ্ধ কখনো সহজ ছিল না...</p>
-        <p class="meta">পাঠকের মন্তব্য: ৭</p>
-      </div>
-    </div>
-  </div>
-
-  <script>
-    function searchStories() {
-      const input = document.getElementById('searchInput').value.toLowerCase();
-      const stories = document.querySelectorAll('.story');
-      stories.forEach(story => {
-        const text = story.innerText.toLowerCase();
-        story.style.display = text.includes(input) ? "block" : "none";
-      });
-    }
-  </script>
 </body>
 </html>
