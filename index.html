@@ -9,12 +9,11 @@
       font-family: 'Noto Sans Bengali', sans-serif;
       margin: 0;
       padding: 0;
+      padding-bottom: 70px; /* Bottom Nav overlap যেন না করে */
       background-color: #e9f5e9;
       color: #333;
-      padding-bottom: 80px; /* Bottom nav bar height space */
     }
 
-    /* ✨ Header & Banner Styles */
     .site-header {
       background: linear-gradient(135deg, #1abc9c, #3498db);
       color: white;
@@ -22,12 +21,14 @@
       text-align: center;
       border-bottom: 5px solid #2980b9;
     }
+
     .banner h1 {
       font-size: 42px;
       margin: 0;
       font-weight: bold;
       letter-spacing: 2px;
     }
+
     .banner p {
       font-size: 20px;
       margin-top: 10px;
@@ -38,12 +39,12 @@
       padding: 20px;
     }
 
-    /* 🔍 Search Box */
     .search-box {
       max-width: 500px;
       margin: 0 auto 30px auto;
       text-align: center;
     }
+
     .search-box input {
       width: 90%;
       padding: 12px;
@@ -52,11 +53,11 @@
       border-radius: 10px;
     }
 
-    /* 📚 Story List */
     .story-list {
       max-width: 700px;
       margin: 0 auto;
     }
+
     .story-card {
       background-color: #ffffff;
       border-radius: 10px;
@@ -65,10 +66,12 @@
       padding: 20px;
       transition: transform 0.2s, box-shadow 0.2s;
     }
+
     .story-card:hover {
       transform: translateY(-5px);
       box-shadow: 0 8px 16px rgba(0,0,0,0.12);
     }
+
     .story-title {
       font-size: 20px;
       font-weight: bold;
@@ -76,26 +79,29 @@
       margin-bottom: 10px;
       text-decoration: none;
     }
+
     .story-title:hover {
       color: #007bff;
     }
+
     .story-desc {
       color: #555;
       font-size: 16px;
     }
 
-    /* 📌 Footer */
     footer {
       background-color: #1e1e1e;
       color: white;
       text-align: center;
       padding: 30px 10px;
     }
+
     footer a {
       color: white;
       text-decoration: none;
       margin: 0 10px;
     }
+
     footer a:hover {
       text-decoration: underline;
     }
@@ -106,10 +112,11 @@
       bottom: 0;
       left: 0;
       width: 100%;
-      background-color: white;
+      background-color: #fff;
       border-top: 1px solid #ccc;
       display: flex;
       justify-content: space-around;
+      align-items: center;
       padding: 8px 0;
       z-index: 999;
     }
@@ -117,17 +124,17 @@
     .bottom-nav a {
       text-decoration: none;
       color: #444;
-      font-size: 14px;
+      font-size: 12px;
       display: flex;
       flex-direction: column;
       align-items: center;
       font-family: 'Noto Sans Bengali', sans-serif;
     }
 
-    .bottom-nav a img {
+    .bottom-nav svg {
       width: 24px;
       height: 24px;
-      margin-bottom: 4px;
+      margin-bottom: 2px;
     }
 
     .bottom-nav a:hover {
@@ -137,7 +144,7 @@
 </head>
 <body>
 
-  <!-- 🌿 Header with Banner -->
+  <!-- 🌿 Header -->
   <header class="site-header">
     <div class="banner">
       <h1>🌿 ভাবনা ২</h1>
@@ -146,18 +153,17 @@
   </header>
 
   <main>
-    <!-- 🔍 Search Box -->
+    <!-- 🔍 Search -->
     <div class="search-box">
       <input type="text" id="searchInput" placeholder="🔍 গল্পের নাম বা শব্দ দিয়ে খুঁজুন..." onkeyup="filterStories()">
     </div>
 
-    <!-- 📚 Story List -->
+    <!-- 📚 Stories -->
     <div class="story-list" id="storyList">
       <div class="story-card">
         <a href="bhangahridoy.html" class="story-title">📖 ভাঙা হৃদয় থেকে বিজয়ের পথে</a>
         <p class="story-desc">একজন তরুণ কীভাবে ভালোবাসার ধাক্কা সামলে নিজের জীবনকে গড়তে শেখে — একটি অনুপ্রেরণামূলক সত্য গল্প।</p>
       </div>
-
       <div class="story-card">
         <a href="onnogolpo.html" class="story-title">📖 অন্য গল্পের নাম</a>
         <p class="story-desc">ছোট বর্ণনা...</p>
@@ -176,31 +182,45 @@
     <a href="#">বিজ্ঞাপন – Advertise</a>
   </footer>
 
-  <!-- 📱 Bottom Navigation Bar -->
+  <!-- 📱 Bottom Navigation -->
   <div class="bottom-nav">
     <a href="index.html">
-      <img src="images/home.png" alt="Home">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <path d="M3 9.75L12 3l9 6.75v10.5a.75.75 0 01-.75.75H3.75A.75.75 0 013 20.25V9.75z" />
+        <path d="M9 22V12h6v10" />
+      </svg>
       <span>হোম</span>
     </a>
     <a href="category.html">
-      <img src="images/category.png" alt="Category">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <path d="M4 6h16M4 12h16M4 18h16"/>
+      </svg>
       <span>শ্রেণী</span>
     </a>
     <a href="write.html">
-      <img src="images/write.png" alt="Write">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <path d="M12 20h9" />
+        <path d="M16.5 3.5a2.121 2.121 0 113 3L7 19l-4 1 1-4 12.5-12.5z" />
+      </svg>
       <span>লিখুন</span>
     </a>
     <a href="articles.html">
-      <img src="images/articles.png" alt="Articles">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <path d="M4 4h16v16H4z" />
+        <path d="M4 8h16M4 12h10" />
+      </svg>
       <span>প্রবন্ধ</span>
     </a>
     <a href="login.html">
-      <img src="images/profile.png" alt="Login">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <path d="M16 21v-2a4 4 0 00-8 0v2" />
+        <circle cx="12" cy="7" r="4" />
+      </svg>
       <span>প্রবেশ</span>
     </a>
   </div>
 
-  <!-- 🔧 JavaScript for Search -->
+  <!-- 🔧 Search Script -->
   <script>
     function filterStories() {
       const input = document.getElementById('searchInput').value.toLowerCase();
@@ -216,6 +236,5 @@
       });
     }
   </script>
-
 </body>
 </html>
