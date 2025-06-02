@@ -4,21 +4,56 @@
   <meta charset="UTF-8">
   <title>গল্প জমা দিন</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: sans-serif;
+      padding: 20px;
+      background-color: #f9f9f9;
+    }
+    h2 {
+      color: #333;
+    }
+    input, textarea, button {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+      font-size: 16px;
+    }
+    button {
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #45a049;
+    }
+  </style>
 </head>
 <body>
+
   <h2>📩 আপনার গল্প পাঠান</h2>
 
   <form action="https://formsubmit.co/el/redumi" method="POST">
-    <input type="text" name="name" placeholder="নাম" required><br><br>
-    <input type="email" name="email" placeholder="ইমেইল" required><br><br>
-    <input type="text" name="title" placeholder="গল্পের শিরোনাম" required><br><br>
-    <textarea name="story" rows="10" placeholder="গল্প লিখুন..." required></textarea><br><br>
+    <input type="text" name="name" placeholder="নাম" required>
+    <input type="email" name="email" placeholder="ইমেইল" required>
+    <input type="text" name="title" placeholder="গল্পের শিরোনাম" required>
+    <textarea name="story" rows="10" placeholder="গল্প লিখুন..." required></textarea>
 
+    <!-- স্প্যাম বট আটকাতে -->
+    <input type="text" name="_honey" style="display:none">
+
+    <!-- ধন্যবাদ পেজ -->
+    <input type="hidden" name="_next" value="https://vhabna2.github.io/vhabna/Thanks.html">
+
+    <!-- ক্যাপচা অফ করতে -->
     <input type="hidden" name="_captcha" value="false">
-    <input type="hidden" name="_template" value="table">
-    <input type="hidden" name="_next" value="https://vhabna2.github.io/thanks.html">
 
     <button type="submit">✅ জমা দিন</button>
   </form>
+
 </body>
 </html>
