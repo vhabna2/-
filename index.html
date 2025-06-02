@@ -160,3 +160,61 @@
 
 </body>
 </html>
+
+<style>
+  .bottom-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    border-top: 1px solid #ccc;
+    display: flex;
+    justify-content: space-around;
+    padding: 8px 0;
+    z-index: 999;
+  }
+
+  .bottom-nav a {
+    text-decoration: none;
+    color: #444;
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Noto Sans Bengali', sans-serif;
+  }
+
+  .bottom-nav a img {
+    width: 24px;
+    height: 24px;
+    margin-bottom: 4px;
+  }
+
+  .bottom-nav a:hover {
+    color: #006666;
+  }
+</style>
+
+<div class="bottom-nav">
+  <a href="index.html">
+    <img src="images/home.png" alt="Home">
+    <span>হোম</span>
+  </a>
+  <a href="category.html">
+    <img src="images/category.png" alt="Category">
+    <span>শ্রেণী</span>
+  </a>
+  <a href="write.html">
+    <img src="images/write.png" alt="Write">
+    <span>লিখুন</span>
+  </a>
+  <a href="articles.html">
+    <img src="images/articles.png" alt="Articles">
+    <span>প্রবন্ধ</span>
+  </a>
+  <a href="login.html">
+    <img src="images/profile.png" alt="Login">
+    <span>প্রবেশ</span>
+  </a>
+</div>
